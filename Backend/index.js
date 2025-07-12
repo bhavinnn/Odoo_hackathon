@@ -1,20 +1,47 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const cors = require('cors');
-dotenv.config();
 
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const connectDB = require("./services/db");
+const cookieParser = require("cookie-parser");
+const { restrictToLoginUser } = require("./middlewares/auth");
+
+
+// Create app
 const app = express();
+const PORT = process.env.PORT || 5000;
+
+
+//database
+connectDB();
+
+
+// routes
+const authRoutes = require('./route/authRoutes');
+const profileRoutes = require('./routes/profile');
+
+
+// Middlewares
+app.use(cookieParser());
+const cookie = require("cookie"); // NOT cookie-parser
+const jwt = require("jsonwebtoken");
 app.use(cors());
 app.use(express.json());
 
-// Routes
-const profileRoutes = require('./routes/profile');
+// Sample route
+app.get("/", (req, res) => {
+  res.send("Skill Swap Backend is Running");
+});
+
+// Load routes
+
+app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+// Start server
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
 
-app.listen(5000, () => console.log('🚀 Server running on port 5000'));
+
+
