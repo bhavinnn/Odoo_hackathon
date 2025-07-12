@@ -150,14 +150,14 @@ const AuthModal = () => {
 
             {signupStep === 2 && (
               <>
-                <input
+                {/* <input
                   type="text"
                   name="username"
                   placeholder="🙋 Choose a username"
                   onChange={handleChange}
                   value={formData.username}
                   className="w-full px-4 py-2.5 border rounded-full bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#6a5acd] text-sm"
-                />
+                /> */}
                 <input
                   type="password"
                   name="password"

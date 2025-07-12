@@ -1,13 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import UserProfile from "./pages/UserProfile"; // ✅ renamed component
-        // ✅ editable profile page
-import AuthModal from "./components/AuthModal";
+import Profile from "./pages/Profile"; // own profile
+import UserDetails from "./pages/UserDetails"; // other user's profile
+import RequestSwap from "./pages/RequestSwap";
+import SwapRequests from "./pages/SwapRequests"; // NEW
 import { AuthProvider } from "./context/AuthContext";
-import Profile from "./pages/Profile";
-
-
 
 function App() {
   return (
@@ -15,10 +13,11 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/user/:id" element={<UserProfile />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/user-details" element={<UserDetails />} />
+          <Route path="/request" element={<RequestSwap />} />
+          <Route path="/swap-requests" element={<SwapRequests />} />
         </Routes>
-        <AuthModal />
       </Router>
     </AuthProvider>
   );
