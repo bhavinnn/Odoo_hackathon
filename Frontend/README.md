@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Skill Swap Platform
+
+---
+
+## Team - Hashbit
+1. Bhavin Barad - bhavinbarad11@gamil.com
+2. Tishya kitrtane - tishyakirtane8@gmail.com
+3. Kartik joshi - joshi.kartik2004@gmail.com
+>>>>>>> b20eabd0515a8c927bf80ad2d95d959bde94c96e
