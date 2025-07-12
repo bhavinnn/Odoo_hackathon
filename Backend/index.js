@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -17,7 +18,7 @@ connectDB();
 
 // routes
 const authRoutes = require('./route/authRoutes');
-
+const profileRoutes = require('./routes/profile');
 
 
 // Middlewares
@@ -35,8 +36,12 @@ app.get("/", (req, res) => {
 // Load routes
 
 app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
 
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
+
+
