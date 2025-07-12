@@ -33,4 +33,8 @@ const ProfileCard = ({ user }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProfileCard;
+=======
+export default ProfileCard;
+>>>>>>> cfa939d75c4537d2ac58a2383d13704a51ed5135

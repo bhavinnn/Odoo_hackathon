@@ -141,4 +141,8 @@ const Profile = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Profile;
+=======
+export default Profile;
+>>>>>>> cfa939d75c4537d2ac58a2383d13704a51ed5135

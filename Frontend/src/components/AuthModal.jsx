@@ -181,4 +181,8 @@ const AuthModal = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AuthModal;
+=======
+export default AuthModal;
+>>>>>>> cfa939d75c4537d2ac58a2383d13704a51ed5135
