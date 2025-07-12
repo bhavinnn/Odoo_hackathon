@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 
 // Update profile using email
 const updateProfileByEmail = async (req, res) => {
@@ -13,7 +13,7 @@ const updateProfileByEmail = async (req, res) => {
       { email },
       profileData,
       { new: true }
-    ).select('-password');
+    ).select('password');
 
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
