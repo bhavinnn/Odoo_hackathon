@@ -19,6 +19,7 @@ connectDB();
 // routes
 const authRoutes = require('./route/authRoutes');
 const profileRoutes = require('./routes/profile');
+const swapRoutes = require('./route/swap');
 
 
 // Middlewares
@@ -27,6 +28,8 @@ const cookie = require("cookie"); // NOT cookie-parser
 const jwt = require("jsonwebtoken");
 app.use(cors());
 app.use(express.json());
+app.use('/api/swap', swapRoutes);
+
 
 // Sample route
 app.get("/", (req, res) => {
